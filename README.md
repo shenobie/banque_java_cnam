@@ -1,4 +1,6 @@
 banque_java_cnam
 ================
 
-studdent project for +3 CNAM degree in JAVA
+Salut les gas,
+
+N'oubliez pas de ne mettre aucunes infos de connexion dans le code ^^ Tout le monde peut voir notre code ^^
