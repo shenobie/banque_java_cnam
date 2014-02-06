@@ -21,6 +21,7 @@ CREATE TABLE IF NOT EXISTS client
    nom VARCHAR(254) NOT NULL  ,
    prenom VARCHAR(254) NOT NULL  ,
    adresse VARCHAR(254) NOT NULL ,
+   password VARCHAR(254) NOT NULL,
    PRIMARY KEY (id),
    INDEX(id_agence),
    FOREIGN KEY (id_agence) REFERENCES  agence (id)
@@ -66,7 +67,7 @@ DELIMITER ;
  
 
 INSERT INTO agence VALUES (null,'55 rue des Peupliers 78344 Poissy','Banque Poissy'); 
-INSERT INTO client VALUES (null,LAST_INSERT_ID(),'Grégoire','Julien','55 rue de Mareil 78100 Saint Germain en Laye');
+INSERT INTO client VALUES (null,LAST_INSERT_ID(),'Grégoire','Julien','55 rue de Mareil 78100 Saint Germain en Laye','123');
 INSERT INTO compte VALUES (null,LAST_INSERT_ID(),'Compte de dépots',1000,null,null,0);
 INSERT INTO `operation` VALUES (null,LAST_INSERT_ID(),'Virement SageCom #13424',200);
 
