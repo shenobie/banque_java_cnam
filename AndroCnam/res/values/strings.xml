@@ -7,5 +7,7 @@
     <string name="login">Login :</string>
     <string name="mdp">Mot de passe :</string>
     <string name="connection">Connection</string>
+    <string name="title_activity_menu2">Menu2Activity</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>
