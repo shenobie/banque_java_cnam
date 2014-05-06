@@ -2,42 +2,41 @@ package com.example.androcnam;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View.OnClickListener;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
-public class MenuPrincipal extends Activity implements View.OnClickListener {
-
+public class MenuPrincipal extends Activity
+{
+	Button BoutonConnection;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_menu_principal);
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu)
-	{
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.menu_principal, menu);
-		return true;
-	}
-
-	@Override
-	public void onClick(View v) {
 		
-		// On récupère l'identifiant de la vue, et en fonction de cet identifiant…
-		  switch(v.getId()) {
-
-		    // Si l'identifiant de la vue est celui du premier bouton
-		    case R.id.BoutonConnection:
-		    
-		    break;
- 
-	   		  }
+	   BoutonConnection = (Button) findViewById(R.id.BoutonConnection);
+		
+	   // recupération du clic sur le bouton de connection
+       BoutonConnection.setOnClickListener(new View.OnClickListener()
+       {
+    	   @Override
+    	   public void onClick(View view)
+    	   {
+                // Launching create new product activity
+                Intent i = new Intent(getApplicationContext(), Sommaire.class);
+                startActivity(i);
+    	   }
+        });
 
 		
+		
+		
 	}
-
 }
