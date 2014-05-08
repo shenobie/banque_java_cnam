@@ -15,12 +15,13 @@
         android:text="@string/bonjour" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/editLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignLeft="@+id/editPassword"
         android:layout_below="@+id/textView1"
         android:layout_marginTop="132dp"
+        android:singleLine="true"
         android:ems="10"
         android:inputType="text" >
 
@@ -31,17 +32,18 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText1"
-        android:layout_alignLeft="@+id/editText1"
+        android:layout_alignBottom="@+id/editLogin"
+        android:layout_alignLeft="@+id/editPassword"
         android:layout_marginBottom="35dp"
         android:text="@string/login" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
+        android:singleLine="true"
         android:ems="10"
         android:inputType="textPassword" />
 
@@ -49,7 +51,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignLeft="@+id/editPassword"
         android:layout_centerVertical="true"
         android:text="@string/mdp" />
     
@@ -57,8 +59,8 @@
         android:id="@+id/BoutonConnection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/editText2"
-        android:layout_below="@+id/editText2"
+        android:layout_alignRight="@+id/editPassword"
+        android:layout_below="@+id/editPassword"
         android:layout_marginTop="17dp"
         android:text="@string/connection" />
 
