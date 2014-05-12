@@ -8,35 +8,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MenuPrincipal" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/bonjour" />
-
-    <EditText
-        android:id="@+id/editLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editPassword"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="132dp"
-        android:singleLine="true"
-        android:ems="10"
-        android:inputType="text" >
-
-        <requestFocus />
-    </EditText>
-    
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editLogin"
-        android:layout_alignLeft="@+id/editPassword"
-        android:layout_marginBottom="35dp"
-        android:text="@string/login" />
-
     <EditText
         android:id="@+id/editPassword"
         android:layout_width="wrap_content"
@@ -52,18 +23,54 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/editPassword"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/editLogin"
+        android:layout_marginTop="20dp"
         android:text="@string/mdp" />
-    
+
     <Button
         android:id="@+id/BoutonConnection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/editPassword"
         android:layout_below="@+id/editPassword"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="18dp"
         android:text="@string/connection" />
 
-   
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/cnam" />
+
+    <EditText
+        android:id="@+id/editLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/textView3"
+        android:ems="10"
+        android:inputType="text"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="@string/bonjour"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editLogin"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="27dp"
+        android:text="@string/login" />
 
 </RelativeLayout>
