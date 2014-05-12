@@ -3,20 +3,11 @@
 
     <string name="app_name">AndroCnam</string>
     <string name="action_settings">Settings</string>
-    <string name="bonjour">Bienvenue dans votre application banquaire, authentifiez vous pour commencer</string>
+    <string name="bonjour">Bonjour et bienvenue</string>
     <string name="login">Login :</string>
     <string name="mdp">Mot de passe :</string>
     <string name="connection">Connection</string>
     <string name="title_activity_sommaire">Sommaire</string>
-    <string name="sommaire">Voici la liste des fonctionalités disponnible</string>
-    <string name="mescomptes">Mes comptes</string>
-    <string name="virement">Effectuer un Virement</string>
-    <string name="rib">Afficher RIB</string>
-    <string name="title_activity_selection_comptes">SelectionComptes</string>
-    <string name="selectionComptes">Selectionez un des vos comptes</string>
-    <string name="title_activity_effectuer_virement">EffectuerVirement</string>
-    <string name="accueilVirement">Enregistrer un virement banquaire</string>
-    <string name="title_activity_afficher_rib">AfficherRib</string>
-    <string name="accueilRib">Voici votre RIB</string>
+    <string name="hello_world">Julien Grégoire est un beau gosse</string>
 
 </resources>
