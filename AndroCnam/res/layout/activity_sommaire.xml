@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Sommaire" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/cnam" />
+
+    <TextView
+        android:id="@+id/mescomptes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/afficherib"
+        android:layout_alignLeft="@+id/accueilsommaire"
+        android:layout_marginBottom="142dp"
+        android:text="@string/mescomptes" />
+
+    <TextView
+        android:id="@+id/afficherib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp"
+        android:text="@string/rib" />
+
+    <TextView
+        android:id="@+id/accueilsommaire"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:text="@string/sommaire" />
+
+    <TextView
+        android:id="@+id/virements"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mescomptes"
+        android:layout_alignBottom="@+id/mescomptes"
+        android:layout_alignRight="@+id/accueilsommaire"
+        android:text="@string/virement" />
+
+    <ImageButton
+        android:id="@+id/imageBoutonComptes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mescomptes"
+        android:layout_alignRight="@+id/mescomptes"
+        android:background="@null"
+        android:src="@drawable/coffrefort" />
+
+    <ImageButton
+        android:id="@+id/imageBoutonVirement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/virements"
+        android:layout_alignRight="@+id/virements"
+        android:background="@null"
+        android:src="@drawable/virement" />
+
+    <ImageButton
+        android:id="@+id/imageBoutonRib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/afficherib"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:src="@drawable/rib" />
+
+</RelativeLayout>
