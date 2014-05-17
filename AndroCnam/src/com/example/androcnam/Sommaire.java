@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class Sommaire extends Activity
 {
@@ -14,7 +15,7 @@ public class Sommaire extends Activity
 	ImageButton Virement;
 	ImageButton Rib;
 	ImageButton Comptes;
-	
+		
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -26,6 +27,15 @@ public class Sommaire extends Activity
 		Rib = (ImageButton) findViewById(R.id.imageBoutonRib);
 		Comptes = (ImageButton) findViewById(R.id.imageBoutonComptes);
 		
+		// on récupère la variable transmise par l'intent précédent
+		
+		Intent intent = getIntent();
+		final String idPersonne = intent.getStringExtra("id");
+		
+		
+
+		
+		
 		  // On fait detecter les clic sur le Bouton virement 
 	       Comptes.setOnClickListener(new View.OnClickListener()
 	       {
@@ -33,7 +43,8 @@ public class Sommaire extends Activity
 	    	   public void onClick(View view)
 	    	   {
 	    		   Intent i = new Intent(getApplicationContext(), SelectionComptes.class);
-            	   startActivity(i);      		   
+	    		   i.putExtra("id",idPersonne);
+	    		   startActivity(i);      		   
 	    		}
 	       });
 	       
@@ -44,7 +55,8 @@ public class Sommaire extends Activity
 	    	   public void onClick(View view)
 	    	   {
 	    		   Intent i = new Intent(getApplicationContext(), EffectuerVirement.class);
-            	   startActivity(i);      		   
+	    		   i.putExtra("id",idPersonne);
+	    		   startActivity(i);      		   
 	    		}
 	       });
 	       
@@ -55,7 +67,8 @@ public class Sommaire extends Activity
 	    	   public void onClick(View view)
 	    	   {
 	    		   Intent i = new Intent(getApplicationContext(), AfficherRib.class);
-            	   startActivity(i);      		   
+	    		   i.putExtra("id",idPersonne);
+	    		   startActivity(i);      		   
 	    		}
 	       });
 	}

@@ -98,6 +98,8 @@ public class MenuPrincipal extends Activity
             	   champLogin.setText(null);
             	   champMdp.setText(null);
             	   Intent a = new Intent(getApplicationContext(), Sommaire.class);
+            	   // on met dans l'intent la variable à passer
+            	   a.putExtra("id", login);
             	   startActivity(a);
                }
                else
