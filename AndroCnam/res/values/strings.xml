@@ -18,5 +18,10 @@
     <string name="accueilVirement">Enregistrer un virement banquaire</string>
     <string name="title_activity_afficher_rib">AfficherRib</string>
     <string name="accueilRib">Voici votre RIB</string>
+    <string name="nagence">Numéro d\'agence:</string>
+    <string name="ncompte">Numéro de compte:</string>
+    <string name="npersonne">Clé d\'identification:</string>
+    <string name="infoRib">Transmettez votre numéro d\'agence,votre numéro de compte
+    et ainsi que votre clé d\'indentification à un tiers pour recevoir un virement banquaire</string>
 
 </resources>

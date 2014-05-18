@@ -21,28 +21,37 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int cnam=0x7f020000;
-        public static final int coffrefort=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
-        public static final int rib=0x7f020003;
-        public static final int virement=0x7f020004;
+        public static final int back_arrow=0x7f020000;
+        public static final int cnam=0x7f020001;
+        public static final int coffrefort=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
+        public static final int rib=0x7f020004;
+        public static final int virement=0x7f020005;
     }
     public static final class id {
-        public static final int BoutonConnection=0x7f080003;
-        public static final int accueilsommaire=0x7f080009;
-        public static final int action_settings=0x7f08000e;
-        public static final int afficherib=0x7f080008;
-        public static final int editLogin=0x7f080002;
-        public static final int editPassword=0x7f080000;
-        public static final int imageBoutonComptes=0x7f08000b;
-        public static final int imageBoutonRib=0x7f08000d;
-        public static final int imageBoutonVirement=0x7f08000c;
-        public static final int imageView1=0x7f080004;
-        public static final int mescomptes=0x7f080007;
-        public static final int textView1=0x7f080006;
-        public static final int textView2=0x7f080001;
-        public static final int textView3=0x7f080005;
-        public static final int virements=0x7f08000a;
+        public static final int BoutonConnection=0x7f08000d;
+        public static final int accueilsommaire=0x7f080011;
+        public static final int action_settings=0x7f080016;
+        public static final int afficherib=0x7f080010;
+        public static final int editLogin=0x7f08000c;
+        public static final int editPassword=0x7f08000b;
+        public static final int idAgence=0x7f080005;
+        public static final int idCompte=0x7f080004;
+        public static final int idPersonne=0x7f080006;
+        public static final int imageBoutonComptes=0x7f080013;
+        public static final int imageBoutonRetour=0x7f080009;
+        public static final int imageBoutonRib=0x7f080015;
+        public static final int imageBoutonVirement=0x7f080014;
+        public static final int imageCnam=0x7f080000;
+        public static final int imageView1=0x7f08000e;
+        public static final int mescomptes=0x7f08000f;
+        public static final int textView1=0x7f080001;
+        public static final int textView2=0x7f080002;
+        public static final int textView3=0x7f080003;
+        public static final int textView4=0x7f080007;
+        public static final int textView5=0x7f080008;
+        public static final int textView6=0x7f08000a;
+        public static final int virements=0x7f080012;
     }
     public static final class layout {
         public static final int activity_afficher_rib=0x7f030000;
@@ -66,9 +75,13 @@ public final class R {
         public static final int app_name=0x7f050000;
         public static final int bonjour=0x7f050002;
         public static final int connection=0x7f050005;
+        public static final int infoRib=0x7f050014;
         public static final int login=0x7f050003;
         public static final int mdp=0x7f050004;
         public static final int mescomptes=0x7f050008;
+        public static final int nagence=0x7f050011;
+        public static final int ncompte=0x7f050012;
+        public static final int npersonne=0x7f050013;
         public static final int rib=0x7f05000a;
         public static final int selectionComptes=0x7f05000c;
         public static final int sommaire=0x7f050007;
