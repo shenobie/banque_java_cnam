@@ -29,14 +29,14 @@ public class AfficherRib extends Activity
 	TextView compte;
 	TextView personne;
 	ImageButton retour;
-	
+	// on instancie la viarable URL pour se connecter à la base.
 	String pid;
 	
 	// JSON parser class
     JSONParser jsonParser = new JSONParser();
  
     // single product url
-    private static final String url = "http://192.168.0.15/banque/rib.php";
+    String url;
     
     // JSON Node names
     private static final String TAG_SUCCESS = "success";
@@ -56,6 +56,14 @@ public class AfficherRib extends Activity
 		// on récupère la variable transmise par l'intent précédent
 		Intent intent = getIntent();
 		pid = intent.getStringExtra("id");
+		
+		// On recupère la variable qui contient l'addresse et le repertoire des fichiers
+		// php pour pouvoir se connecter à la base.
+		String ipBase = intent.getStringExtra("url");
+		// url prends l'adresse Ip plus le nom du fichier php à traiter, faire comme 
+		// ça sur les autres activités pour faciliter les choses :)
+		url = ipBase+"rib.php";
+		
 		
 		// Getting complete product details in background thread
         new GetRib().execute();

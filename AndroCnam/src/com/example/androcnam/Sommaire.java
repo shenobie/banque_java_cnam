@@ -31,6 +31,7 @@ public class Sommaire extends Activity
 		
 		Intent intent = getIntent();
 		final String idPersonne = intent.getStringExtra("id");
+		final String ipBase = intent.getStringExtra("url");
 		
 		
 
@@ -44,6 +45,7 @@ public class Sommaire extends Activity
 	    	   {
 	    		   Intent i = new Intent(getApplicationContext(), SelectionComptes.class);
 	    		   i.putExtra("id",idPersonne);
+	    		   i.putExtra("url",ipBase);
 	    		   startActivity(i);      		   
 	    		}
 	       });
@@ -56,6 +58,7 @@ public class Sommaire extends Activity
 	    	   {
 	    		   Intent i = new Intent(getApplicationContext(), EffectuerVirement.class);
 	    		   i.putExtra("id",idPersonne);
+	    		   i.putExtra("url",ipBase);
 	    		   startActivity(i);      		   
 	    		}
 	       });
@@ -67,6 +70,7 @@ public class Sommaire extends Activity
 	    	   public void onClick(View view)
 	    	   {
 	    		   Intent i = new Intent(getApplicationContext(), AfficherRib.class);
+	    		   i.putExtra("url",ipBase);
 	    		   i.putExtra("id",idPersonne);
 	    		   startActivity(i);      		   
 	    		}

@@ -41,7 +41,8 @@ public class MenuPrincipal extends Activity
 	
 	
 	// Variable qui sert à joindre le scipt php pour se connecter à la base de données
-	private static final String	UPDATE_URL	= "http://192.168.0.15/banque/login.php";
+	private static final String ipBase = "http://192.168.0.15/banque/";
+	private static final String	UPDATE_URL	= ipBase+"login.php";
 	
 	// Bouton de connection
 	Button BoutonConnection;
@@ -100,6 +101,7 @@ public class MenuPrincipal extends Activity
             	   Intent a = new Intent(getApplicationContext(), Sommaire.class);
             	   // on met dans l'intent la variable à passer
             	   a.putExtra("id", login);
+            	   a.putExtra("url",ipBase);
             	   startActivity(a);
                }
                else
