@@ -21,6 +21,10 @@
     <string name="nagence">Numéro d\'agence:</string>
     <string name="ncompte">Numéro de compte:</string>
     <string name="npersonne">Clé d\'identification:</string>
+    <string name="ncible">Id du compte destinataire</string>
+    <string name="montant">Somme à transférer</string>
+    <string name="validation">Validez le virement</string>
+    <string name="details">Details complémentaires</string>
     <string name="infoRib">Transmettez votre numéro d\'agence,votre numéro de compte
     et ainsi que votre clé d\'indentification à un tiers pour recevoir un virement banquaire</string>
 
