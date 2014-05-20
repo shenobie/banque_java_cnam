@@ -41,7 +41,7 @@ public class MenuPrincipal extends Activity
 	
 	
 	// Variable qui sert à joindre le scipt php pour se connecter à la base de données
-	private static final String ipBase = "http://192.168.0.15/banque/";
+	private static final String ipBase = "http://192.168.43.154/banque/";
 	private static final String	UPDATE_URL	= ipBase+"login.php";
 	
 	// Bouton de connection

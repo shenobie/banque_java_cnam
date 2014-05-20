@@ -1,4 +1,6 @@
 <?php
+header('content-type=application/json;charset=utf-8');
+
  
 /*
  * All database connection variables

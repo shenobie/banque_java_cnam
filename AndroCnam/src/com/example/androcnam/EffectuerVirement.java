@@ -22,8 +22,8 @@ public class EffectuerVirement extends Activity {
 	
 	
 	// url du fichier php réalisant le virement
-    private static final String url = "http://192.168.1.38/banque/virement.php";
-	 
+    
+	String url; 
     // Progress Dialog
     private ProgressDialog pDialog;
  
@@ -44,6 +44,13 @@ public class EffectuerVirement extends Activity {
      // on récupère la variable transmise par l'intent précédent
      		Intent intent = getIntent();
      		pid = intent.getStringExtra("id");
+     		
+     	// On recupère la variable qui contient l'addresse et le repertoire des fichiers
+    		// php pour pouvoir se connecter à la base.
+    		String ipBase = intent.getStringExtra("url");
+    		// url prends l'adresse Ip plus le nom du fichier php à traiter, faire comme 
+    		// ça sur les autres activités pour faciliter les choses :)
+    		url = ipBase+"virement.php";
  
         // Edition de textes
         inputId = (EditText) findViewById(R.id.inputId);
@@ -92,14 +99,14 @@ public class EffectuerVirement extends Activity {
  
             // creation des paramètres
             List<NameValuePair> params = new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("pid", pid));
             params.add(new BasicNameValuePair("cible", cible));
             params.add(new BasicNameValuePair("montant", montant));
             params.add(new BasicNameValuePair("libelle", libelle));
  
             
             // Creation de l'url grace à l'objeret JSON et la methode GET
-            JSONObject json = jsonParser.makeHttpRequest(url,
-                    "GET", params);
+            JSONObject json = jsonParser.makeHttpRequest(url,"GET", params);
  
             // check log cat fro response
             Log.d("Create Response", json.toString());

@@ -1,4 +1,6 @@
 <?php
+header('content-type=application/json;charset=utf-8');
+
     unset($_GET);
     
     if( isset($_POST['username']) && isset($_POST['password']) ) {
@@ -6,13 +8,13 @@
         echo '<?xml version="1.0"?>'."\n";
         echo "<login>\n";
     
-    // host doit être remplacé par le serveur de la base de données.
-    // user représente le nom d'utilisateur de la base de données.
-    // pass est le mot de passe pour accéder à cette base de données avec cette 
+    // host doit Ãªtre remplacÃ© par le serveur de la base de donnÃ©es.
+    // user reprÃ©sente le nom d'utilisateur de la base de donnÃ©es.
+    // pass est le mot de passe pour accÃ©der Ã  cette base de donnÃ©es avec cette 
 	// utilisateur.
         if (!@mysql_connect('localhost','root', '')) { error(1); }
     
-	// database représente le nom d ela base de données
+	// database reprÃ©sente le nom d ela base de donnÃ©es
 	    if (!mysql_select_db('banque')) { error(2); }
     
         if(get_magic_quotes_gpc()) {

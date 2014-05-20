@@ -1,4 +1,5 @@
 <?php
+header('content-type=application/json;charset=utf-8');
  
 /*
  * Following code will create a new product row
@@ -9,9 +10,10 @@
 $response = array();
  
 // check for required fields
-if (isset($_GET['cible']) && isset($_GET['montant']) && isset($_GET['libelle'])) {
+if (isset($_GET['pid']) && isset($_GET['cible']) && isset($_GET['montant']) && isset($_GET['libelle'])) {
 
 	$today = gmdate("Y-m-d H:i:s");
+	$pid = $_GET['pid'];
 	$cible = $_GET['cible'];
     $montant = $_GET['montant'];
     $libelle = $_GET['libelle'];
@@ -23,7 +25,8 @@ if (isset($_GET['cible']) && isset($_GET['montant']) && isset($_GET['libelle']))
     $db = new DB_CONNECT();
  
     // mysql inserting a new row
-    $result = mysql_query("INSERT INTO operation_compte_depot(id_compte,libelle,montant,date_op) VALUES('$cible','$libelle','$montant','$today')");
+	mysql_query("INSERT INTO operation_compte_depot(id_compte,libelle,montant,date_op) VALUES(".$pid.",'".$libelle."',-".$montant.",NOW());");
+    $result = mysql_query("INSERT INTO operation_compte_depot(id_compte,libelle,montant,date_op) VALUES(".$cible.",'".$libelle."',".$montant.",NOW());");
  
     // check if row inserted or not
     if ($result) {

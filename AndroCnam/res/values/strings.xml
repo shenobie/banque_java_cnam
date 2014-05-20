@@ -3,10 +3,10 @@
 
     <string name="app_name">AndroCnam</string>
     <string name="action_settings">Settings</string>
-    <string name="bonjour">Bienvenue dans votre application banquaire, authentifiez vous pour commencer</string>
+    <string name="bonjour">Bienvenue dans votre application bancaire, authentifiez vous pour commencer</string>
     <string name="login">Login :</string>
     <string name="mdp">Mot de passe :</string>
-    <string name="connection">Connection</string>
+    <string name="connection">Connexion</string>
     <string name="title_activity_sommaire">Sommaire</string>
     <string name="sommaire">Voici la liste des fonctionalités disponnible</string>
     <string name="mescomptes">Mes comptes</string>

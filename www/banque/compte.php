@@ -1,5 +1,8 @@
 <?php
-header('content-type=application/json;charset=utf-8'); 
+header('content-type=application/json;charset=utf-8');
+
+
+ 
 /*
  * Following code will get single product details
  * A product is identified by product id (pid)
@@ -17,35 +20,41 @@ $db = new DB_CONNECT();
 // check for post data
 if (isset($_GET["pid"])) {
     $pid = $_GET['pid'];
- 
-    // get a product from products table
-    $result = mysql_query("select client.id_agence as agence,compte_depot.id as num_compte FROM client,compte_depot WHERE client.id = compte_depot.id_client AND client.id = $pid");
- 
-    if (!empty($result)) {
+    
+
+
+       // $requete = "SELECT libelle,solde FROM livret_jeune WHERE id_client='".$login."'";
+      // $result2 = mysql_query("SELECT libelle,solde FROM livret_jeune WHERE id_client=$pid");
+
+        
+        $result = mysql_query("SELECT id,libelle,solde FROM compte_depot WHERE id_client = $pid");
+        
+        if (!empty($result)) {
         // check for empty result
         if (mysql_num_rows($result) > 0)
-		{
+        {
  
             $result = mysql_fetch_array($result);
  
-            $product = array();
-            $product["id_agence"] = $result["agence"];
-            $product["id_compte"] = $result["num_compte"];
+            $compte = array();
+			$compte["id"] = $result["id"];
+            $compte["libelle"] = $result["libelle"];
+            $compte["solde"] = $result["solde"];
             
             // success
             $response["success"] = 1;
  
             // user node
-            $response["product"] = array();
+            $response["compte"] = array();
  
-            array_push($response["product"], $product);
+            array_push($response["compte"], $compte);
  
             // echoing JSON response
             echo json_encode($response);
         } else {
             // no product found
             $response["success"] = 0;
-            $response["message"] = "No RIB found";
+            $response["message"] = "No compte found";
  
             // echo no users JSON
             echo json_encode($response);
@@ -53,7 +62,7 @@ if (isset($_GET["pid"])) {
     } else {
         // no product found
         $response["success"] = 0;
-        $response["message"] = "No RIB found";
+        $response["message"] = "No compte found";
  
         // echo no users JSON
         echo json_encode($response);
